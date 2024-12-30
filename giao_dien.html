@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="giao_dien.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="khung">
+      <div class="dau">
+        <div class="nav">
+          <div class="logo">logo</div>
+          <div class="menu">
+            <div class="menu">
+              <ul>
+                <li><a href="#">mới nhất</a></li>
+                <li><a href="#">lịch thi đấu</a></li>
+                <li><a href="#">kết quả</a></li>
+                <li><a href="#">giải đấu</a></li>
+                <li><a href="#">kết quả</a></li>
+                <li><a href="#">đội bóng</a></li>
+                <li><a href="#">X</a></li>
+                <li><a href="/code/dangnhap.html">đăng nhập</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+            <div class="hinh">
+          <a href="#"><img src="/code/tai nguyen/img2.jpg" alt="" /></a>
+         
+            ><img
+              src="/code/tai nguyen/Screenshot 2024-12-11 002723.jpg"
+              alt=""
+          /></a>
+          <a href="#"><img src="/code/tai nguyen/img2.jpg" alt="" /></a>
+         
+            ><img
+              src="/code/tai nguyen/Screenshot 2024-12-11 002723.jpg"
+              alt=""
+          /></a>
+        </div>
+        <button class="arrow left" onclick="prevSlide()">&#9664;</button>
+      <button class="arrow right" onclick="nextSlide()">&#9654;</button>
+      </div>
+      <div class="than">
+        <div class="chuchay">
+          <div class="moinhat">
+            <span>Mới nhất: </span>
+          </div>
+<div class="thongtin"><marquee behavior="scroll" direction="left">Manchester United 10 - 0 Manchester City</marquee></div>
+        </div>
+        <div class="than2">
+          <div class="thantrai"><a href="#"><div class="anhto"><img src="/code/tai nguyen/img3.jpg" alt=""><p>chấ
+            n động MU thua thể chấp nhận nổi</p></div></a></div>
+          <div class="thanphai">
+            <ul>
+              <li><a href="/code/dangnhap.html">làm sao để bán được </a></li>
+              <li><a href="#">tin tức nóng nhất</a></li>
+              <li><a href="#">tin tức nóng nhất</a></li>
+              <li><a href="#">tin tức nóng nhất</a></li>
+              <li><a href="#">tin tức nóng nhất</a></li>
+              <li><a href="#">tin tức nóng nhất</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="tinnong"><span>TIN NÓNG</span></div>
+        <div class="all">
+          <div class="all_trai"><a href="#"><div class="img"><img src="/code/tai nguyen/img4.jpg" alt=""></div>
+            <p>Chelsea đang thăng hoa dưỡi thời huấn luyện viên mới</p></a></div>
+          <div class="all_phai">
+          <div class="tt"><div class="anh"><a href="#"></a><img src="/code/tai nguyen/img5.png" alt=""></a></div>
+          <div class="chu"><a href="#"><p class="chudam">Xuân Son liên tục ghi bàn</p><p class="chunhat">trong trận đấu 
+            hôm qua với Singapore Xuân son ghi 2 bàn để vượn lên dẫn đầu danh sách...</p></a></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="cuoi">phancuoi</div>
+    </div>
+    <script>
+      const slideContainer = document.querySelector(".hinh");
+      const slides = document.querySelectorAll(".hinh img");
+      const totalSlides = slides.length;
+      let currentSlide = 0;
+    
+      function updateSlidePosition() {
+        slideContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+      }
+    
+      function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+      }
+    
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlidePosition();
+      }
+    </script>
+    
+  </body>
+</html>
